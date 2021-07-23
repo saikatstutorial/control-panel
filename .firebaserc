@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "control-panel-21": {
+      "hosting": {
+        "control-panel": [
+          "control-panel-21"
+        ]
+      }
+    }
+  }
+}
