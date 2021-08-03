@@ -5,6 +5,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { LayoutComponent } from './components/layout/layout.component';
+import { MatListModule } from '@angular/material/list';
 
 const modules = [
   CommonModule,
@@ -13,16 +16,26 @@ const modules = [
   MatCardModule,
   MatFormFieldModule,
   MatInputModule,
-  MatButtonModule
+  MatButtonModule,
+  MatSidenavModule,
+  MatListModule
+];
+
+
+const components = [
+  LayoutComponent
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ...components
+  ],
   imports: [
     ...modules
   ],
   exports: [
-    ...modules
+    ...modules,
+    ...components
   ]
 })
 export class SharedModule {

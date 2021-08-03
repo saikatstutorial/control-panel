@@ -1,0 +1,15 @@
+<app-layout>
+    <div class="menu">
+        <mat-nav-list>
+            <a mat-list-item [routerLink]="['administrators']">
+                Administrators
+            </a>
+            <a mat-list-item (click)="signout()">
+                Sign Out
+            </a>
+        </mat-nav-list>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</app-layout>

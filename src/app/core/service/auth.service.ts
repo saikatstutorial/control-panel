@@ -64,4 +64,16 @@ export class AuthService {
       return null;
     }
   }
+
+  signup(email: string, password: string, onSuccess: any, onError: any) {
+    this._afa.createUserWithEmailAndPassword(email, password)
+      .then(result => {
+        console.log(result);
+        onSuccess();
+      })
+      .catch(error => {
+        console.log(error);
+        onError();
+      })
+  }
 }
