@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 
 const modules = [
   CommonModule,
@@ -18,7 +19,8 @@ const modules = [
   MatInputModule,
   MatButtonModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatTableModule
 ];
 
 
