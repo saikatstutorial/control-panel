@@ -1,6 +1,7 @@
 export interface UserModel {
     email: string,
-    uid: string
+    uid: string,
+    isDisabled: boolean
 }
 
 export interface User {

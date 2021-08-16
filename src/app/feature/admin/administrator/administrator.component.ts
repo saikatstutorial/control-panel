@@ -10,7 +10,7 @@ import { UserService } from 'src/app/shared/services/user.service';
   styleUrls: ['./administrator.component.scss']
 })
 export class AdministratorComponent implements OnInit {
-  displayedColumns: string[] = ['email', 'uid'];
+  displayedColumns: string[] = ['email', 'uid', 'action'];
   form: FormGroup;
   dataSource: User[] = [];
   constructor(
@@ -49,6 +49,15 @@ export class AdministratorComponent implements OnInit {
           console.log("failed")
         });
     }
+  }
+
+  disable(user: User){
+    let payload = user.userModel;
+    payload.isDisabled = true;
+    this._UserService.updateUser(user, payload).then((result) => {
+      console.log("success");
+      alert("Success");
+    }, (error) => console.log(error));
   }
 
 }

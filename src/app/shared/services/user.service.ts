@@ -26,4 +26,8 @@ export class UserService {
             )
         )
     }
+
+    updateUser(user: User, payload: UserModel) {
+        return this.userCollection.doc(user.id).update(payload);
+    }
 }
